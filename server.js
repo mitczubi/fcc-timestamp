@@ -1,10 +1,7 @@
 const express = require('express');
-const cors = require('cors');
 
 var app = express();
 const port = process.env.PORT || 3000
-
-app.use(cors);
 
 app.use(function (req, res, next) {
     console.log(req.method + " " + req.path + " - " + req.ip);
