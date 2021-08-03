@@ -20,7 +20,7 @@ app.get('/api/:date?', function(req, res) {
         date = new Date()
     } else {
         if (!isNaN(date_string)) {
-            date = new Date(parseInt(date_string))
+            date = new Date(parseInt(date_string) * 1000)
         } else {
             date = new Date(date_string)
         }
