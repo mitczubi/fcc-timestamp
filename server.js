@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 var app = express();
+const port = process.env.PORT || 3000
 
 app.use(cors);
 
@@ -40,6 +41,6 @@ app.get('/api/:date?', function(req, res) {
     }
 })
 
-app.listen(8000, function() {
-    console.log("Server running. Listening on port %d", 8000)
+app.listen(port, function() {
+    console.log("Server running. Listening on port %d", port)
 })
